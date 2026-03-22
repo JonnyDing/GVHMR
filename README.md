@@ -33,11 +33,9 @@ Please see [installation](docs/INSTALL.md) for details.
 ### [<img src="https://s2.loli.net/2024/09/15/aw3rElfQAsOkNCn.png" width="20"> HuggingFace demo for GVHMR](https://huggingface.co/spaces/LittleFrog/GVHMR)
 
 ### Demo
-Demo entries are provided in `tools/demo`. Use `-s` to skip visual odometry if you know the camera is static, otherwise the camera will be estimated by DPVO.
-We also provide a script `demo_folder.py` to inference a entire folder.
+Use the runtime entrypoint `infer.py`. Use `-s` to skip visual odometry if you know the camera is static.
 ```shell
-python tools/demo/demo.py --video=docs/example_video/tennis.mp4 -s
-python tools/demo/demo_folder.py -f inputs/demo/folder_in -d outputs/demo/folder_out -s
+python infer.py --video=docs/example_video/tennis.mp4 --output_root=outputs/demo -s
 ```
 
 ### Reproduce
